@@ -1,0 +1,12 @@
+@mixin flex($row, $wrap, $just, $align, $gap) {
+  display: flex;
+  flex-flow: $row $wrap;
+  justify-content: $just;
+
+  @if ($wrap== 'nowrap') {
+    align-items: $align;
+  } @else {
+    align-content: $align;
+  }
+  gap: $gap;
+}
